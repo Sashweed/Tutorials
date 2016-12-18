@@ -56,7 +56,7 @@ def main(_):
     # Import data
     mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True)
 
-"""
+""" Apparently I dont need these ???? y_ is def'ed later
     #Base Placeholders
     x = tf.placeholder(tf.float32, shape=[None, 784])
     y_ = tf.placeholder(tf.float32, shape=[None, 10])
@@ -116,12 +116,15 @@ def main(_):
     print("test accuracy %g" % accuracy.eval(feed_dict={
         x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
 
-    # Test trained model
+"""
+This is already done above
+
+# Test trained model
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     print(sess.run(accuracy, feed_dict={x: mnist.test.images,
                                         y_: mnist.test.labels}))
-
+"""
 
 """   # The raw formulation of cross-entropy,
     #
