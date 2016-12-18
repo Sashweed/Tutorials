@@ -55,12 +55,12 @@ def max_pool_2x2(x):
 def main(_):
     # Import data
     mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True)
-
-""" Apparently I dont need these ???? y_ is def'ed later
+    """
+    Apparently I dont need these ???? y_ is def'ed later
     #Base Placeholders
     x = tf.placeholder(tf.float32, shape=[None, 784])
     y_ = tf.placeholder(tf.float32, shape=[None, 10])
-"""
+    """
     # Create the model (oldshit ????)
     x = tf.placeholder(tf.float32, [None, 784])
     W = tf.Variable(tf.zeros([784, 10]))
