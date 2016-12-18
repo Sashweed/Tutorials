@@ -27,9 +27,9 @@ import sys
 from tensorflow.examples.tutorials.mnist import input_data
 
 import tensorflow as tf
+sess = tf.InteractiveSession()
 
 FLAGS = None
-
 
 # Weird shit I can't put anywhere else
 
